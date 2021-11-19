@@ -1,0 +1,50 @@
+.simple-react-chart .axes {
+  padding-left: 16px;
+}
+
+.simple-react-chart .axis {
+  width: 1px;
+  height: 200px;
+  background-color: black;
+}
+
+.simple-react-chart .axis-horizontal {
+  height: 1px;
+  width: 400px;
+}
+
+.simple-react-chart .axis-name {
+  margin: 0 0 -4px -16px;
+}
+
+.simple-react-chart .axis-name-bottom {
+  margin: 2px 0 0 400px;
+}
+
+.simple-react-chart .axis-arrow {
+  width: 1px;
+  height: 10px;
+  margin-left: -4px;
+  margin-bottom: -10px;
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+.simple-react-chart .axis-arrow-right {
+  margin-left: 4px;
+  transform: rotate(-45deg);
+}
+
+.simple-react-chart .axis-arrow-bottom {
+  margin-left: 400px;
+  margin-bottom: -8px;
+}
+
+.simple-react-chart .axis-arrow-bottom .axis-arrow {
+  margin-top: 6px;
+}
+
+.simple-react-chart .axis-arrow-bottom .axis-arrow-right {
+  margin-top: -8px;
+  margin-left: -4px;
+}
