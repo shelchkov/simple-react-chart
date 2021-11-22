@@ -1,16 +1,53 @@
 import React from "react"
-import { ChartValue } from "./interfaces"
+import { AxisParams, ChartValue } from "./interfaces"
 import { lineChartSize } from "./utils"
 
 interface Props {
   points: ChartValue[]
   keys: string[]
-  coefficient?: number
+  axisParams: AxisParams
+  axisHorizontalParams: AxisParams
 }
 
-export const PointsLines = ({ points, keys, coefficient = 1 }: Props) => {
+const getX = (
+  point: ChartValue,
+  key: string,
+  index: number,
+  coefficient: number,
+  min: number
+) => {
+  if (typeof point[key] === "number") {
+    return ((point[key] as number) - min) * coefficient
+  }
+
+  return index * coefficient
+}
+
+const getY = (
+  point: ChartValue,
+  key: string,
+  index: number,
+  coefficient: number,
+  height: number,
+  min: number
+) => {
+  if (typeof point[key] === "number") {
+    return height - ((point[key] as number) - min) * coefficient
+  }
+
+  return index
+}
+
+export const PointsLines = ({
+  points,
+  keys,
+  axisParams,
+  axisHorizontalParams
+}: Props) => {
   const [key1, key2] = keys
   const { height } = lineChartSize
+  const { coefficient, min } = axisParams
+  const { coefficient: coefficient2, min: min2 } = axisHorizontalParams
 
   return (
     <svg className="points-lines">
@@ -20,10 +57,18 @@ export const PointsLines = ({ points, keys, coefficient = 1 }: Props) => {
           : (
           <line
             stroke="black"
-            x1={points[index - 1][key2] * coefficient}
-            y1={height - points[index - 1][key1] * coefficient}
-            x2={point[key2] * coefficient}
-            y2={height - point[key1] * coefficient}
+            x1={getX(points[index - 1], key2, index - 1, coefficient2, min2)}
+            y1={getY(
+              points[index - 1],
+              key1,
+              index - 1,
+              coefficient,
+              height,
+              min
+            )}
+            x2={getX(point, key2, index, coefficient2, min2)}
+            y2={getY(point, key1, index, coefficient, height, min)}
+            key={`${point[key1]}-${point[key2]}`}
           />
             )
       )}

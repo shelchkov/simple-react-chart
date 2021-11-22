@@ -1,11 +1,30 @@
-.simple-react-chart .axes {
-  padding-left: 16px;
+.simple-react-chart .chart {
+  position: relative;
+  margin-left: 40px;
 }
 
 .simple-react-chart .axis {
   width: 1px;
-  height: 200px;
+  height: 199px;
+  position: relative;
   background-color: black;
+}
+
+.simple-react-chart .axis .axis-value {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  margin: 0;
+  height: fit-content;
+  width: fit-content;
+  transform: translateY(50%);
+}
+
+.simple-react-chart .axis .axis-value-horizontal {
+  transform: translateX(-50%);
+  right: auto;
+  bottom: auto;
+  top: 4px;
 }
 
 .simple-react-chart .axis-horizontal {
@@ -14,44 +33,46 @@
 }
 
 .simple-react-chart .axis-name {
-  margin: 0 0 -4px -16px;
+  position: absolute;
+  top: -32px;
+  right: 6px;
 }
 
 .simple-react-chart .axis-name-bottom {
-  margin: 2px 0 0 400px;
+  position: absolute;
+  right: -6px;
+  top: 4px;
+  margin: 0;
 }
 
 .simple-react-chart .axis-arrow {
   width: 1px;
   height: 10px;
-  margin-left: -4px;
-  margin-bottom: -10px;
+  position: absolute;
+  left: -4px;
+  top: 0;
   transform: rotate(45deg);
   background-color: black;
 }
 
 .simple-react-chart .axis-arrow-right {
-  margin-left: 4px;
+  left: 4px;
   transform: rotate(-45deg);
 }
 
-.simple-react-chart .axis-arrow-bottom {
-  margin-left: 400px;
-  margin-bottom: -8px;
-}
-
 .simple-react-chart .axis-arrow-bottom .axis-arrow {
-  margin-top: 6px;
+  top: -1px;
+  right: 1px;
+  left: auto;
 }
 
 .simple-react-chart .axis-arrow-bottom .axis-arrow-right {
-  margin-top: -8px;
-  margin-left: -4px;
+  top: -8px;
 }
 
 .simple-react-chart .points-lines {
   width: 400px;
-  height: 233px;
-  margin-left: 17px;
-  margin-top: -233px;
+  height: 240px;
+  position: absolute;
+  bottom: -40px;
 }

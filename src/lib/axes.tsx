@@ -1,20 +1,19 @@
 import React from "react"
-import { AxisArrow } from "./axis-arrow"
-import { Axe } from "./interfaces"
+import { Axis } from "./axis"
+import { AxisHorizontal } from "./axis-horizontal"
+import { AxisT, AxisValue } from "./interfaces"
 
 interface Props {
-  axes: Axe[]
+  axes: AxisT[]
+  values: AxisValue[]
+  valuesHorizontal: AxisValue[]
 }
 
-const getAxeName = (axe: Axe) => axe.name || axe.key
+const getAxeName = (axe: AxisT) => axe.name || axe.key
 
-export const Axes = ({ axes }: Props) => (
-  <div className="axes">
-    <p className="axis-name">{getAxeName(axes[0])}</p>
-    <AxisArrow />
-    <div className="axis" />
-    <div className="axis axis-horizontal" />
-    <AxisArrow isBottom />
-    <p className="axis-name-bottom">{getAxeName(axes[1])}</p>
+export const Axes = ({ axes, values, valuesHorizontal }: Props) => (
+  <div>
+    <Axis name={getAxeName(axes[0])} values={values} />
+    <AxisHorizontal name={getAxeName(axes[1])} values={valuesHorizontal} />
   </div>
 )

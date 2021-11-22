@@ -5,11 +5,12 @@
   "main": "lib/index.js",
   "scripts": {
     "start:demo": "webpack serve",
-    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run pretty; npm run lint:fix",
     "build:demo": "NODE_ENV=production webpack",
     "build:lib": "npm run lib:files && npm run lib:compile",
     "typecheck": "tsc --noEmit",
-    "format": "prettier 'src/**/*' --write",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier 'src/**/*' --write",
     "lib:files": "babel src/lib --extensions '.ts,.tsx' -d lib --delete-dir-on-start --copy-files",
     "lib:compile": "tsc src/lib/index.ts --outDir lib --declaration",
     "lint": "eslint \"src/**/*.{ts,tsx}\""
