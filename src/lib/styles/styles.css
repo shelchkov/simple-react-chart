@@ -1,0 +1,11 @@
+.simple-react-chart .chart {
+  position: relative;
+  margin-left: 40px;
+}
+
+.simple-react-chart .points-lines {
+  position: absolute;
+  bottom: -40px;
+  width: 400px;
+  height: 240px;
+}

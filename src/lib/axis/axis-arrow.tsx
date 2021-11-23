@@ -1,5 +1,5 @@
 import React from "react"
-import { mergeStyles } from "./utils"
+import { mergeStyles } from "../utils"
 
 interface Props {
   isBottom?: boolean

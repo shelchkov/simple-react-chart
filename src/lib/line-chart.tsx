@@ -1,8 +1,8 @@
 import React from "react"
-import { Axes } from "./axes"
+import { Axes } from "./axis/axes"
 import { AxisT, ChartValue } from "./interfaces"
-import { PointsLines } from "./points-lines"
-import "./styles.css"
+import { PointsLines } from "./axis/chart/points-lines"
+import "./styles/styles.css"
 import { getAxisValues, lineChartSize } from "./utils"
 
 interface Props {
@@ -33,12 +33,14 @@ export const LineChart = ({ data, axes }: Props) => {
           valuesHorizontal={axisValuesHorizontal}
         />
 
-        <PointsLines
-          points={data}
-          keys={keys}
-          axisParams={axisParams}
-          axisHorizontalParams={axisHorizontalParams}
-        />
+        <svg className="points-lines">
+          <PointsLines
+            points={data}
+            keys={keys}
+            axisParams={axisParams}
+            axisHorizontalParams={axisHorizontalParams}
+          />
+        </svg>
       </div>
     </div>
   )

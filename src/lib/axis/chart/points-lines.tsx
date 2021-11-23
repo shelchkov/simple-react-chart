@@ -1,6 +1,6 @@
 import React from "react"
-import { AxisParams, ChartValue } from "./interfaces"
-import { lineChartSize } from "./utils"
+import { AxisParams, ChartValue } from "../../interfaces"
+import { lineChartSize } from "../../utils"
 
 interface Props {
   points: ChartValue[]
@@ -50,7 +50,7 @@ export const PointsLines = ({
   const { coefficient: coefficient2, min: min2 } = axisHorizontalParams
 
   return (
-    <svg className="points-lines">
+    <>
       {points.map((point, index) =>
         index === 0
           ? undefined
@@ -72,6 +72,6 @@ export const PointsLines = ({
           />
             )
       )}
-    </svg>
+    </>
   )
 }

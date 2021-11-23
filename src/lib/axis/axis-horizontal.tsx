@@ -1,7 +1,7 @@
 import React from "react"
 import { AxisArrow } from "./axis-arrow"
-import { AxisValue } from "./interfaces"
-import { trimValue } from "./utils"
+import { AxisValue } from "../interfaces"
+import { trimValue } from "../utils"
 
 interface Props {
   name: string

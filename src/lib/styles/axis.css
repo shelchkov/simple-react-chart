@@ -1,35 +1,30 @@
-.simple-react-chart .chart {
-  position: relative;
-  margin-left: 40px;
-}
-
 .simple-react-chart .axis {
+  position: relative;
   width: 1px;
   height: 199px;
-  position: relative;
   background-color: black;
+}
+
+.simple-react-chart .axis-horizontal {
+  height: 1px;
+  width: 400px;
 }
 
 .simple-react-chart .axis .axis-value {
   position: absolute;
   bottom: 0;
   right: 6px;
-  margin: 0;
   height: fit-content;
   width: fit-content;
+  margin: 0;
   transform: translateY(50%);
 }
 
 .simple-react-chart .axis .axis-value-horizontal {
-  transform: translateX(-50%);
   right: auto;
   bottom: auto;
   top: 4px;
-}
-
-.simple-react-chart .axis-horizontal {
-  height: 1px;
-  width: 400px;
+  transform: translateX(-50%);
 }
 
 .simple-react-chart .axis-name {
@@ -46,11 +41,11 @@
 }
 
 .simple-react-chart .axis-arrow {
-  width: 1px;
-  height: 10px;
   position: absolute;
   left: -4px;
   top: 0;
+  width: 1px;
+  height: 10px;
   transform: rotate(45deg);
   background-color: black;
 }
@@ -68,11 +63,4 @@
 
 .simple-react-chart .axis-arrow-bottom .axis-arrow-right {
   top: -8px;
-}
-
-.simple-react-chart .points-lines {
-  width: 400px;
-  height: 240px;
-  position: absolute;
-  bottom: -40px;
 }

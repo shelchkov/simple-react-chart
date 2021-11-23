@@ -1,7 +1,8 @@
 import React from "react"
 import { Axis } from "./axis"
 import { AxisHorizontal } from "./axis-horizontal"
-import { AxisT, AxisValue } from "./interfaces"
+import { AxisT, AxisValue } from "../interfaces"
+import "../styles/axis.css"
 
 interface Props {
   axes: AxisT[]
