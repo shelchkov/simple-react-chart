@@ -29,15 +29,14 @@
 
 .simple-react-chart .axis-name {
   position: absolute;
-  top: -32px;
+  top: -18px;
   right: 6px;
+  margin: 0;
 }
 
 .simple-react-chart .axis-name-bottom {
-  position: absolute;
-  right: -6px;
-  top: 4px;
-  margin: 0;
+  right: -26px;
+  top: 6px;
 }
 
 .simple-react-chart .axis-arrow {
