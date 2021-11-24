@@ -29,3 +29,7 @@ You can set name of axis. It will be shown instead of key.
 ```javascript
 const axes = [{ key: "y", name: "Value" }, { key: "x", name: "Time" }]
 ```
+
+## Customisations
+
+You can pass height and width to LineChart to change it's size.

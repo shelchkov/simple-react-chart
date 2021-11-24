@@ -1,12 +1,12 @@
 import React from "react"
 import { AxisParams, ChartValue } from "../../interfaces"
-import { lineChartSize } from "../../utils"
 
 interface Props {
   points: ChartValue[]
   keys: string[]
   axisParams: AxisParams
   axisHorizontalParams: AxisParams
+  height: number
 }
 
 const getX = (
@@ -42,10 +42,10 @@ export const PointsLines = ({
   points,
   keys,
   axisParams,
-  axisHorizontalParams
+  axisHorizontalParams,
+  height
 }: Props) => {
   const [key1, key2] = keys
-  const { height } = lineChartSize
   const { coefficient, min } = axisParams
   const { coefficient: coefficient2, min: min2 } = axisHorizontalParams
 

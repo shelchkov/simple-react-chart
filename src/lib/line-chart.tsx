@@ -8,19 +8,26 @@ import { getAxisValues, lineChartSize } from "./utils"
 interface Props {
   data: ChartValue[]
   axes: AxisT[]
+  width?: number
+  height?: number
 }
 
-export const LineChart = ({ data, axes }: Props) => {
+export const LineChart = ({
+  data,
+  axes,
+  width = lineChartSize.width,
+  height = lineChartSize.height
+}: Props) => {
   const keys = axes.map(({ key }) => key)
 
   const { values: axisValues, params: axisParams } = getAxisValues(
-    lineChartSize.height,
+    height,
     data.map((point) => point[keys[0]])
   )
 
   const { values: axisValuesHorizontal, params: axisHorizontalParams } =
     getAxisValues(
-      lineChartSize.width,
+      width,
       data.map((point) => point[keys[1]])
     )
 
@@ -31,14 +38,17 @@ export const LineChart = ({ data, axes }: Props) => {
           axes={axes}
           values={axisValues}
           valuesHorizontal={axisValuesHorizontal}
+          width={width}
+          height={height}
         />
 
-        <svg className="points-lines">
+        <svg className="points-lines" style={{ width, height }}>
           <PointsLines
             points={data}
             keys={keys}
             axisParams={axisParams}
             axisHorizontalParams={axisHorizontalParams}
+            height={height}
           />
         </svg>
       </div>

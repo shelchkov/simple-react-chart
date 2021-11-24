@@ -7,11 +7,18 @@ interface Props {
   name: string
   values: AxisValue[]
   isHorizontal?: boolean
+  length: number
 }
 
-export const Axis = ({ name, values, isHorizontal }: Props) => (
+export const Axis = ({ name, values, isHorizontal, length }: Props) => (
   <>
-    <div className={mergeStyles("axis", isHorizontal && "axis-horizontal")}>
+    <div
+      className={mergeStyles("axis", isHorizontal && "axis-horizontal")}
+      style={{
+        width: isHorizontal ? length : 1,
+        height: isHorizontal ? 1 : length
+      }}
+    >
       <AxisArrow isBottom={isHorizontal} />
       <p
         className={mergeStyles("axis-name", isHorizontal && "axis-name-bottom")}
