@@ -1,0 +1,65 @@
+.simple-react-chart .axis {
+  position: relative;
+  width: 1px;
+  height: 199px;
+  background-color: black;
+}
+
+.simple-react-chart .axis-horizontal {
+  height: 1px;
+  width: 400px;
+}
+
+.simple-react-chart .axis .axis-value {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  height: fit-content;
+  width: fit-content;
+  margin: 0;
+  transform: translateY(50%);
+}
+
+.simple-react-chart .axis .axis-value-horizontal {
+  right: auto;
+  bottom: auto;
+  top: 4px;
+  transform: translateX(-50%);
+}
+
+.simple-react-chart .axis-name {
+  position: absolute;
+  top: -18px;
+  right: 6px;
+  margin: 0;
+}
+
+.simple-react-chart .axis-name-bottom {
+  right: -26px;
+  top: 6px;
+}
+
+.simple-react-chart .axis-arrow {
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 1px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+.simple-react-chart .axis-arrow-right {
+  left: 4px;
+  transform: rotate(-45deg);
+}
+
+.simple-react-chart .axis-arrow-bottom .axis-arrow {
+  top: -1px;
+  right: 1px;
+  left: auto;
+}
+
+.simple-react-chart .axis-arrow-bottom .axis-arrow-right {
+  top: -8px;
+}

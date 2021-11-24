@@ -1,3 +1,3 @@
-import { a } from "./a"
+import { LineChart } from "./line-chart"
 
-export { a }
+export { LineChart }
