@@ -10,13 +10,15 @@ interface Props {
   axes: AxisT[]
   width?: number
   height?: number
+  lineColor?: string
 }
 
 export const LineChart = ({
   data,
   axes,
   width = lineChartSize.width,
-  height = lineChartSize.height
+  height = lineChartSize.height,
+  lineColor
 }: Props) => {
   const keys = axes.map(({ key }) => key)
 
@@ -49,6 +51,7 @@ export const LineChart = ({
             axisParams={axisParams}
             axisHorizontalParams={axisHorizontalParams}
             height={height}
+            color={lineColor}
           />
         </svg>
       </div>

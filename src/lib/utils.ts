@@ -108,7 +108,7 @@ export const trimValue = (value: number | string, length = 3) => {
   let newValue = `${integer}`
 
   if (newValue.length < length) {
-    newValue += `${fraction}`.slice(1, length - newValue.length + 1)
+    newValue += `${fraction}`.slice(1, length - newValue.length + 2)
   }
 
   return parseFloat(newValue)

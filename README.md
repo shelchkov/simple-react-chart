@@ -2,6 +2,8 @@
 
 ## How to use
 
+### Line Chart
+
 Pass two axes and array of values to LineChart component. Data needs to contain values with keys corresponding to those of axes. Vertical axis goes first in an array and horizontal goes second.
 
 ```javascript
@@ -24,12 +26,24 @@ const NonNumData = [
 <LineChart axes={axes} data={nonNumData} />
 ```
 
+#### Customisations
+
+##### Axes names
+
 You can set name of axis. It will be shown instead of key.
 
 ```javascript
 const axes = [{ key: "y", name: "Value" }, { key: "x", name: "Time" }]
 ```
 
-## Customisations
+##### Chart Size
 
 You can pass height and width to LineChart to change it's size.
+
+##### Line color
+
+You can pass lineColor to LineChart to change it's line color.
+
+```javascript
+<LineChart axes={axes} data={data} width={600} lineColor="grey" />
+```

@@ -1,5 +1,6 @@
 import React from "react"
 import { AxisParams, ChartValue } from "../../interfaces"
+import { colors } from "../../utils/theme"
 
 interface Props {
   points: ChartValue[]
@@ -7,6 +8,7 @@ interface Props {
   axisParams: AxisParams
   axisHorizontalParams: AxisParams
   height: number
+  color?: string
 }
 
 const getX = (
@@ -43,7 +45,8 @@ export const PointsLines = ({
   keys,
   axisParams,
   axisHorizontalParams,
-  height
+  height,
+  color = colors.blacks[0]
 }: Props) => {
   const [key1, key2] = keys
   const { coefficient, min } = axisParams
@@ -56,7 +59,7 @@ export const PointsLines = ({
           ? undefined
           : (
           <line
-            stroke="black"
+            stroke={color}
             x1={getX(points[index - 1], key2, index - 1, coefficient2, min2)}
             y1={getY(
               points[index - 1],
