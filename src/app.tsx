@@ -20,17 +20,20 @@ const data = [
   { x: 14, y: 4 }
 ]
 
-// const data2 = [
-//   { x: "V0", y: 0 },
-//   { x: "V1", y: 0.5 },
-//   { x: "V2", y: 2 },
-//   { x: "V3", y: 4 }
-// ]
+const data2 = [
+  { x: "V0", y: 0 },
+  { x: "V1", y: 0.5 },
+  { x: "V2", y: 2 },
+  { x: "V3", y: 4 }
+]
 
 export const App = () => (
   <div>
     <h1>Simple React Chart</h1>
 
     <LineChart axes={axes} data={data} />
+
+    <p>Custom size and line color</p>
+    <LineChart axes={axes} data={data2} width={500} lineColor="grey" />
   </div>
 )

@@ -1,0 +1,43 @@
+environment:
+  NPM_TOKEN:
+    secure: X2j/60HUwEOfKeWKBhULQ5cxY9QDwmahtXeg6GP3bg22TRMT5FrjWGduxZfNKJfD
+  GIT_NAME: Yaroslav Shelchkov
+  GIT_EMAIL: shelchkovy@yandex.ru
+  HEROKU_API_KEY:
+    secure: jPWq020PLzj6m4aJkjSCJcXuwD/CYjSLNs1tPNPBRP8Hs5YvF0cGJCZR+X/BiSJL
+  APP_NAME: simple-react-chart
+
+image: Ubuntu
+
+init:
+  - nvm use 14
+install:
+  - npm install
+test_script:
+  - npm run typecheck
+  - npm run format
+
+skip_branch_with_pr: true
+
+for:
+  -
+    branches:
+      only:
+        - /v\d+\.\d+\.\d+/
+    skip_non_tags: true
+    before_build:
+      - npm run build:lib
+      - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+      - npm publish
+    build_script:
+      - curl https://cli-assets.heroku.com/install.sh | sh
+      - npm run build:demo
+      - git config user.name "${GIT_NAME}" && git config user.email "${GIT_EMAIL}"
+      - rm .gitignore
+      - git add static.json build && git commit -m'Deploy ${APPVEYOR_REPO_TAG_NAME}'
+      - git push -f https://heroku:${HEROKU_API_KEY}@git.heroku.com/${APP_NAME}.git HEAD:master
+  -
+    branches:
+      except:
+        - /v\d+\.\d+\.\d+/
+    build: off
