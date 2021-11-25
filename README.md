@@ -1,5 +1,9 @@
 # Simple React Chart
 
+[![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart) ![npm](https://img.shields.io/npm/v/simple-react-chart)
+
+[Demo](https://simple-react-chart.herokuapp.com)
+
 ## How to use
 
 ### Line Chart

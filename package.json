@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Chart",
   "main": "lib/index.js",
+  "files": ["lib/**/*"],
+  "types": "lib/index.d.ts",
   "scripts": {
     "start:demo": "webpack serve",
     "format": "npm run pretty; npm run lint:fix",
@@ -13,7 +15,8 @@
     "pretty": "prettier 'src/**/*' --write",
     "lib:files": "babel src/lib --extensions '.ts,.tsx' -d lib --delete-dir-on-start --copy-files",
     "lib:compile": "tsc src/lib/index.ts --outDir lib --declaration",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "chart"
