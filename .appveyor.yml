@@ -15,7 +15,7 @@ install:
   - npm install
 test_script:
   - npm run typecheck
-  - npm run format
+  - npm run lint
 
 skip_branch_with_pr: true
 
