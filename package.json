@@ -1,7 +1,7 @@
 {
   "name": "simple-react-chart",
   "version": "0.0.1",
-  "description": "Chart",
+  "description": "React chart component",
   "main": "lib/index.js",
   "files": ["lib/**/*"],
   "types": "lib/index.d.ts",
@@ -19,7 +19,12 @@
     "postversion": "git push && git push --tags"
   },
   "keywords": [
-    "chart"
+    "chart",
+    "react",
+    "reactjs",
+    "graph",
+    "data",
+    "visualization"
   ],
   "license": "ISC",
   "devDependencies": {
