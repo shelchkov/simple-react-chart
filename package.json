@@ -1,9 +1,11 @@
 {
   "name": "simple-react-chart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React chart component",
   "main": "lib/index.js",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "types": "lib/index.d.ts",
   "scripts": {
     "start:demo": "webpack serve",
