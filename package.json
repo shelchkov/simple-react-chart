@@ -1,6 +1,6 @@
 {
   "name": "simple-react-chart",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "React chart component",
   "main": "lib/index.js",
   "files": [
@@ -16,7 +16,7 @@
     "lint:fix": "npm run lint -- --fix",
     "pretty": "prettier 'src/**/*' --write",
     "lib:files": "babel src/lib --extensions '.ts,.tsx' -d lib --delete-dir-on-start --copy-files",
-    "lib:compile": "tsc src/lib/index.ts --outDir lib --declaration",
+    "lib:compile": "tsc src/lib/index.ts --outDir lib --declaration --jsx react-jsx --esModuleInterop",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "postversion": "git push && git push --tags"
   },

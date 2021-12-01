@@ -9,10 +9,12 @@ const letterWidth = 8
 const axisStepPadding = 20
 const axisStep = 30
 
-export const mergeStyles = (
-  ...styles: (string | boolean | undefined)[]
-): string =>
-  styles.reduce((acc: string, style) => (style ? `${acc} ${style}` : acc), "")
+export const mergeStyles = (...styles: (string | boolean | undefined)[]) =>
+  styles.reduce(
+    (acc: string, style) =>
+      typeof style === "string" ? `${acc} ${style}` : acc,
+    ""
+  ) as string
 
 const getAxisParams = (
   length: number,
