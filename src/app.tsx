@@ -1,5 +1,6 @@
 import React from "react"
 import { LineChart } from "./lib"
+import "./styles/app.css"
 
 const axes = [{ key: "y" }, { key: "x" }]
 const data = [
@@ -20,17 +21,27 @@ const data = [
   { x: 14, y: 4 }
 ]
 
-// const data2 = [
-//   { x: "V0", y: 0 },
-//   { x: "V1", y: 0.5 },
-//   { x: "V2", y: 2 },
-//   { x: "V3", y: 4 }
-// ]
+const data2 = [
+  { x: "V0", y: 0 },
+  { x: "V1", y: 0.5 },
+  { x: "V2", y: 2 },
+  { x: "V3", y: 4 }
+]
 
 export const App = () => (
-  <div>
-    <h1>Simple React Chart</h1>
+  <div className="demo-app">
+    <h1 className="title">Simple React Chart</h1>
 
-    <LineChart axes={axes} data={data} />
+    <a
+      href="https://www.npmjs.com/package/simple-react-chart"
+      className="docs-link"
+    >
+      Documentation
+    </a>
+
+    <LineChart axes={axes} data={data2} />
+
+    <p className="description">Custom size and line color</p>
+    <LineChart axes={axes} data={data} width={500} lineColor="#C2B8AD" />
   </div>
 )

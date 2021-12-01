@@ -1,5 +1,10 @@
 # Simple React Chart
 
+[![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart)
+![npm](https://img.shields.io/npm/v/simple-react-chart)
+
+[Demo](https://simple-react-chart.herokuapp.com)
+
 ## How to use
 
 ### Line Chart
@@ -47,3 +52,7 @@ You can pass lineColor to LineChart to change it's line color.
 ```javascript
 <LineChart axes={axes} data={data} width={600} lineColor="grey" />
 ```
+
+### Styling
+
+You can style chart container with css by using simple-react-chart class.
