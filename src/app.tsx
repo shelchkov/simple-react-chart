@@ -33,7 +33,7 @@ export const App = () => (
     <h1 className="title">Simple React Chart</h1>
 
     <a
-      href="https://www.npmjs.com/package/simple-react-chart"
+      href="https://www.npmjs.com/package/simple-chart-react"
       className="docs-link"
     >
       Documentation
