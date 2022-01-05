@@ -3,7 +3,7 @@ import { Axes } from "./axis/axes"
 import { AxisT, ChartValue } from "./interfaces"
 import { PointsLines } from "./axis/chart/points-lines"
 import "./styles/styles.css"
-import { getAxisValues, lineChartSize } from "./utils"
+import { chartVerticalPadding, getAxisValues, lineChartSize } from "./utils"
 
 interface Props {
   data: ChartValue[]
@@ -34,7 +34,10 @@ export const LineChart = ({
     )
 
   return (
-    <div className="simple-react-chart">
+    <div
+      className="simple-react-chart"
+      style={{ height: height + chartVerticalPadding }}
+    >
       <div className="chart">
         <Axes
           axes={axes}
