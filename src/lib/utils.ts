@@ -8,6 +8,7 @@ export const lineChartSize: ChartSize = {
 const letterWidth = 8
 const axisStepPadding = 20
 const axisStep = 30
+export const chartVerticalPadding = 20
 
 export const mergeStyles = (...styles: (string | boolean | undefined)[]) =>
   styles.reduce(
