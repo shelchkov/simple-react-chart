@@ -4,7 +4,7 @@ environment:
   GIT_NAME: Yaroslav Shelchkov
   GIT_EMAIL: shelchkovy@yandex.ru
   HEROKU_API_KEY:
-    secure: jPWq020PLzj6m4aJkjSCJcXuwD/CYjSLNs1tPNPBRP8Hs5YvF0cGJCZR+X/BiSJL
+    secure: R/5IvI/HPYe7XOScz/pQZ0tM2YMv3izoJu0P9gf7nUOjyAeYq4yHTLLfyyf2GflR
   APP_NAME: simple-react-chart
 
 image: Ubuntu
