@@ -1,11 +1,8 @@
 environment:
   NPM_TOKEN:
     secure: X2j/60HUwEOfKeWKBhULQ5cxY9QDwmahtXeg6GP3bg22TRMT5FrjWGduxZfNKJfD
-  GIT_NAME: Yaroslav Shelchkov
-  GIT_EMAIL: shelchkovy@yandex.ru
-  HEROKU_API_KEY:
-    secure: R/5IvI/HPYe7XOScz/pQZ0tM2YMv3izoJu0P9gf7nUOjyAeYq4yHTLLfyyf2GflR
-  APP_NAME: simple-react-chart
+  DEPLOY_HOOK:
+    secure: lgHgjTE7lKmIKHVjnf51q0zxzzmourN5yJMDM5nmvHNe0/sCSYxYQlOtaGyMA+RU+HAtHkHPs0skrZmLksJ4/wD1utUO/GxfKZHB0lcd1bI=
 
 image: Ubuntu
 
@@ -30,13 +27,7 @@ for:
       - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
       - npm publish
     build_script:
-      - curl https://cli-assets.heroku.com/install.sh | sh
-      - npm run build:demo
-      - git config user.name "${GIT_NAME}" && git config user.email "${GIT_EMAIL}"
-      - rm .gitignore
-      - git add static.json build && git commit -m'Deploy ${APPVEYOR_REPO_TAG_NAME}'
-      - heroku stack:set heroku-20 --app ${APP_NAME}
-      - git push -f https://heroku:${HEROKU_API_KEY}@git.heroku.com/${APP_NAME}.git HEAD:refs/heads/master
+      - curl ${DEPLOY_HOOK}
   -
     branches:
       except:
