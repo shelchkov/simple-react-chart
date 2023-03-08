@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart)
 ![npm](https://img.shields.io/npm/v/simple-chart-react)
 
-[Demo](https://simple-react-chart.herokuapp.com)
+[Demo](https://simple-react-chart.onrender.com)
 
 ## How to use
 
