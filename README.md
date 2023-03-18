@@ -2,6 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart)
 ![npm](https://img.shields.io/npm/v/simple-chart-react)
+[![Known Vulnerabilities](https://snyk.io/test/github/shelchkov/simple-react-chart/badge.svg)](https://snyk.io/test/github/shelchkov/simple-react-chart)
 
 [Demo](https://simple-react-chart.onrender.com)
 
