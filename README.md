@@ -2,6 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart)
 ![npm](https://img.shields.io/npm/v/simple-chart-react)
+[![DeepScan grade](https://deepscan.io/api/teams/20729/projects/24159/branches/741807/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20729&pid=24159&bid=741807)
 
 [Demo](https://simple-react-chart.onrender.com)
 
