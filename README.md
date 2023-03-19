@@ -3,6 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/dhn5tb94gfvsvrpd?svg=true&retina=true)](https://ci.appveyor.com/project/shelchkov/simple-react-chart)
 ![npm](https://img.shields.io/npm/v/simple-chart-react)
 [![DeepScan grade](https://deepscan.io/api/teams/20729/projects/24159/branches/741807/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20729&pid=24159&bid=741807)
+[![Known Vulnerabilities](https://snyk.io/test/github/shelchkov/simple-react-chart/badge.svg)](https://snyk.io/test/github/shelchkov/simple-react-chart)
 
 [Demo](https://simple-react-chart.onrender.com)
 
