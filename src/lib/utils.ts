@@ -15,14 +15,16 @@ export const mergeStyles = (...styles: (string | boolean | undefined)[]) =>
     (acc: string, style) =>
       typeof style === "string" ? `${acc} ${style}` : acc,
     ""
-  ) as string
+  )
+
+const isNumbersArray = (array: string[] | number[]): array is number[] => typeof array[0] === "number"
 
 const getAxisParams = (
   length: number,
-  values: (string | number)[]
+  values: string[] | number[]
 ): AxisParams => {
-  if (typeof values[0] === "number") {
-    let [min, max] = (values as number[]).reduce(
+  if (isNumbersArray(values)) {
+    let [min, max] = values.reduce(
       (acc, value) => {
         if (acc[0] > value) {
           acc[0] = value
@@ -48,7 +50,7 @@ const getAxisParams = (
     }
   }
 
-  const maxLength = (values as string[]).reduce(
+  const maxLength = values.reduce(
     (acc, value) => (value.length > acc ? value.length : acc),
     0
   )

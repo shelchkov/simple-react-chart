@@ -18,8 +18,10 @@ const getX = (
   coefficient: number,
   min: number
 ) => {
-  if (typeof point[key] === "number") {
-    return ((point[key] as number) - min) * coefficient
+  const value = point[key]
+
+  if (typeof value === "number") {
+    return (value - min) * coefficient
   }
 
   return index * coefficient
@@ -33,8 +35,10 @@ const getY = (
   height: number,
   min: number
 ) => {
-  if (typeof point[key] === "number") {
-    return height - ((point[key] as number) - min) * coefficient
+  const value = point[key]
+
+  if (typeof value === "number") {
+    return height - (value - min) * coefficient
   }
 
   return index
